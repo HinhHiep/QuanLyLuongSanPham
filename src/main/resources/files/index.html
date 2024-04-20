@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý lương sản phẩm</title>
+</head>
+<style>
+    .container {
+        text-align: center;
+    }
+
+    /* Remove default bullets */
+    ul,
+    #myUL1 {
+        list-style-type: none;
+    }
+
+    /* Remove margins and padding from the parent ul */
+    #myUL {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Style the caret/arrow */
+    .caret {
+        cursor: pointer;
+        user-select: none;
+        /* Prevent text selection */
+    }
+
+    /* Create the caret/arrow with a unicode, and style it */
+    .caret::before {
+        content: "\25B6";
+        color: black;
+        display: inline-block;
+        margin-right: 6px;
+    }
+
+    /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+    .caret-down::before {
+        transform: rotate(90deg);
+    }
+
+    /* Hide the nested list */
+    .nested {
+        display: none;
+    }
+
+    /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+    .active {
+        display: block;
+    }
+
+    li {
+        text-align: left;
+        line-height: 30px;
+    }
+
+    .li-bold-ita {
+        font-weight: bold;
+        font-style: italic;
+        text-indent: 25px;
+    }
+
+    .bold {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .giandong {
+        line-height: 30px;
+    }
+
+    .giandong span:first-child {
+        font-size: 18px;
+        font-style: italic;
+        color: #888;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1 class="title">CHƯƠNG TRÌNH QUẢN LÝ LƯƠNG SẢN PHẨM </h1>
+        <ul id="myUL1">
+            <li><span class="caret bold">Hướng dẫn sử dụng cơ bản</span>
+                <ul class="nested">
+                    <li class="li-bold-ita">Giới thiệu tổng quan về giao diện người dùng của phần mềm.</li>
+                    <li>Phần mềm Tính lương Sản phẩm cung cấp một giao diện người dùng thân thiện và dễ sử dụng, thiết
+                        kế để giúp người dùng dễ dàng tiếp cận và thực hiện các chức năng chính của phần mềm một cách
+                        hiệu quả. Giao diện chính của phần mềm chia thành các khu vực chức năng để người dùng có thể dễ
+                        dàng tương tác và thực hiện các công việc cần thiết.
+
+                        Thanh điều hướng:
+                        Thanh điều hướng ở phía bên trái màn hình cung cấp truy cập nhanh chóng đến các chức năng chính
+                        của phần mềm. Người dùng có thể dễ dàng chuyển đổi giữa các mô-đun chức năng như Tính lương,
+                        Quản lý người dùng, Báo cáo, và Trợ giúp.
+
+                        Phần nội dung chính:
+                        Khu vực chính của giao diện hiển thị thông tin cụ thể hoặc chức năng được chọn từ thanh điều
+                        hướng. Ví dụ, trong mô-đun Tính lương, người dùng có thể nhập liệu thông tin, xem kết quả tính
+                        toán lương, và thực hiện các thao tác điều chỉnh.
+
+                        Công cụ và tiện ích:
+                        Giao diện cung cấp các công cụ và tiện ích như bộ lọc, tìm kiếm, và các nút thực hiện hành động.
+                        Điều này giúp người dùng tìm kiếm và thực hiện các chức năng một cách nhanh chóng và dễ dàng.
+
+                        Thông tin hỗ trợ:
+                        Trang Help được tích hợp trực tiếp vào giao diện, cung cấp hỗ trợ người dùng thông qua việc giải
+                        đáp các câu hỏi thường gặp, cung cấp hướng dẫn sử dụng và cách thức liên hệ khi cần hỗ trợ kỹ
+                        thuật.</li>
+                </ul>
+            </li>
+        </ul>
+        <hr>
+        <ul id="myUL2">
+            <li><span class="caret bold">Hướng dẫn sử dụng cơ bản</span>
+                <ul class="nested">
+                    <li><span class="caret li-bold-ita">Thực hiện tính lương sản phẩm</span>
+                        <ul class="nested giandong">
+                            <li><span>Đăng nhập:</span> <span>Sử dụng tài khoản người kế toán để truy cập vào phần mềm.
+                                    Chọn quyền truy cập và tư cách là người quản lý hoặc người kế toán để có quyền truy
+                                    cập vào chức năng Tính lương.</span></li>
+                            <li><span>Chọn Ngày Tính Lương:</span> <span>Truy cập chức năng Tính lương và chọn ngày cần
+                                    tính lương cho nhân viên hoặc công nhân.
+                                    Nhập ngày cụ thể mà bạn muốn tính toán lương.</span></li>
+                            <li><span>Xác định Loại Nhân Viên hoặc Công Nhân:</span> <span>Chọn loại nhân viên (công
+                                    nhân hoặc nhân viên) mà bạn muốn tính toán lương.
+                                    Hệ thống sẽ xác định loại lương cần tính dựa trên sự lựa chọn của bạn.</span></li>
+                            <li><span>Nhập Dữ Liệu:</span> <span>Đối với công nhân: Nhập số lượng sản phẩm mà công nhân
+                                    đã sản xuất trong ngày.
+                                    Đối với nhân viên: Nhập mức lương cứng của nhân viên.</span></li>
+                            <li><span>Xuất Bảng Lương:</span> <span>Sau khi nhập dữ liệu, hệ thống sẽ tự động tính toán
+                                    lương dựa trên loại công việc và số liệu đã nhập.
+                                    Kết quả tính toán sẽ hiển thị trong bảng lương với thông tin chi tiết về lương và
+                                    các thông tin liên quan.</span></li>
+                            <li><span>Thông Tin Chi Tiết:</span> <span>Bảng lương sẽ hiển thị thông tin chi tiết về mức
+                                    lương, số sản phẩm, hoặc thông tin cần thiết tùy thuộc vào loại công việc đã
+                                    chọn.</span></li>
+                            <li><span>Lưu và Xuất Kết Quả:</span> <span>Kết quả tính toán có thể được lưu lại hoặc xuất
+                                    ra dưới dạng tệp để sử dụng cho mục đích báo cáo hoặc lưu trữ.</span></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="caret li-bold-ita">Thực hiện phân công sản phẩm (Chỉ dành cho Người Tổ
+                            Trưởng)</span>
+                        <ul class="nested giandong">
+                            <li><span>Đăng nhập:</span> <span>Sử dụng tài khoản người tổ trưởng để truy cập vào phần
+                                    mềm.</span></li>
+                            <li><span>Chọn Ngày Phân Công:</span> <span>Truy cập vào chức năng "Phân công sản phẩm" và
+                                    chọn ngày cần phân công sản phẩm cho công nhân.</span></li>
+                            <li><span>Nhập Dữ Liệu:</span> <span>Nhập số lượng sản phẩm mà công nhân cần sản
+                                    xuất.</span></li>
+                            <li><span>Xác nhận Phân Công:</span> <span>Xác nhận thông tin phân công sản phẩm để lưu
+                                    lại.</span></li>
+                            <li><span>Thông Tin Chi Tiết:</span> <span>Hiển thị thông tin chi tiết về số lượng sản phẩm
+                                    được phân công và các thông tin liên quan.</span></li>
+                            <li><span>Lưu và Xuất Kết Quả:</span> <span>Thông tin phân công có thể được lưu lại hoặc
+                                    xuất ra dưới dạng tệp để sử dụng cho mục đích báo cáo hoặc lưu trữ.</span></li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+    <script>
+        var toggler = document.getElementsByClassName("caret");
+        var i;
+
+        for (i = 0; i < toggler.length; i++) {
+            toggler[i].addEventListener("click", function () {
+                this.parentElement.querySelector(".nested").classList.toggle("active");
+                this.classList.toggle("caret-down");
+            });
+        }
+    </script>
+</body>
+
+</html>
